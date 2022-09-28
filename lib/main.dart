@@ -1,6 +1,7 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/AppCard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -113,11 +114,14 @@ class _RootPageState extends State<RootPage> {
                     const SizedBox(
                       height: 2,
                     ),
-                    Text(
-                      'View All',
-                      style: GoogleFonts.poppins(
-                        textStyle: const TextStyle(
-                            color: Color(0xffFB931C), fontSize: 14),
+                    TextButton(
+                      onPressed: () {  },
+                      child: Text(
+                        'View All',
+                        style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                              color: Color(0xffFB931C), fontSize: 14),
+                        ),
                       ),
                     ),
                   ],
@@ -222,68 +226,34 @@ class _RootPageState extends State<RootPage> {
                     const SizedBox(
                       height: 2,
                     ),
-                    Text(
-                      'View All',
-                      style: GoogleFonts.poppins(
-                        textStyle: const TextStyle(
-                            color: Color(0xffFB931C), fontSize: 14),
+                    TextButton(
+                      onPressed: () {  },
+                      child: Text(
+                        'View All',
+                        style: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                              color: Color(0xffFB931C), fontSize: 14),
+                        ),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(
-                  height: 10,
+                  height: 1,
                 ),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
-                  child: Padding(
-                    padding: const EdgeInsets.all(16.0),
-                    child: Card(
-                      margin: EdgeInsets.all(8),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: Column(children: [
-                          Image.asset('images/10.png'),
-                          Text(
-                            'Chicken Biriyani',
-                            style: GoogleFonts.poppins(
-                              textStyle: const TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600),
-                            ),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                '5',
-                                style: GoogleFonts.poppins(
-                                  textStyle: const TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              ),
-                              const SizedBox(width: 40,),
-                              SizedBox(
-                                height: 40,
-                                width: 50,
-                                child: ElevatedButton(
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius:
-                                              BorderRadius.circular(5.0)), backgroundColor: const Color(0xffFB931C)),
-                                  child: const SizedBox(width: 10, child: Icon(Icons.add))
-                                ),
-                              )
-                            ],
-                          )
-                        ]),
-                      ),
-                    ),
+                  child: Row(
+                    children: const [
+                      // Padding(
+                      //   padding: const EdgeInsets.all(16.0),
+                         AppCard(),
+                         AppCard(),
+                         AppCard(),
+                         AppCard(),
+                         AppCard(),
+                    ],
+                  ),
                   ),
               ],
             ),
