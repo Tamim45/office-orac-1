@@ -239,7 +239,7 @@ class _RootPageState extends State<RootPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: Card(
-                      margin: EdgeInsets.all(16),
+                      margin: EdgeInsets.all(8),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5),
                         ),
