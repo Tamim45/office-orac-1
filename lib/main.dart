@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primarySwatch: Colors.grey,
+          primaryColor: Colors.white,
         ),
         home: const RootPage());
   }
@@ -82,7 +82,9 @@ class _RootPageState extends State<RootPage> {
                   height: 10,
                 ),
                 Stack(alignment: Alignment.bottomLeft, children: <Widget>[
-                  Image.asset('images/4.png'),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.asset('images/4.png')),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: ElevatedButton(
